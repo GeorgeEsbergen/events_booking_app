@@ -52,15 +52,14 @@ class _OrganizerProfileBodyState extends State<OrganizerProfileBody> {
                       builder: (context, state) {
                         return BlueProfileButton(
                           fun: () {
-                           
-                            BlocProvider.of<EvnetDetailsCubit>(context)
-                                .doIt(BlocProvider.of<EvnetDetailsCubit>(context)
-                                        .isTrue);
+                            BlocProvider.of<EvnetDetailsCubit>(context).doIt(
+                                BlocProvider.of<EvnetDetailsCubit>(context)
+                                    .isTrue);
                           },
                           icon:
                               BlocProvider.of<EvnetDetailsCubit>(context).isTrue
-                                  ?  Icons.person_add_disabled_outlined:Icons.person_add_alt,
-                                  
+                                  ? Icons.person_add_disabled_outlined
+                                  : Icons.person_add_alt,
                           text:
                               BlocProvider.of<EvnetDetailsCubit>(context).isTrue
                                   ? "Followed"

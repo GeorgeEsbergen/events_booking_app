@@ -10,7 +10,8 @@ class OnBoardingContainer extends StatelessWidget {
     super.key,
     required this.size,
     required this.bigText,
-    required this.smallText, required this.fun,
+    required this.smallText,
+    required this.fun,
   });
 
   final Size size;
@@ -26,7 +27,7 @@ class OnBoardingContainer extends StatelessWidget {
         padding: const EdgeInsets.only(top: 35, right: 20, left: 20),
         alignment: Alignment.bottomCenter,
         width: size.width,
-        height: size.height / 3,
+        height: size.height / 2.7,
         decoration: const BoxDecoration(
             color: MainColors.blueColor,
             borderRadius: BorderRadius.only(
@@ -34,21 +35,20 @@ class OnBoardingContainer extends StatelessWidget {
                 topRight: Radius.elliptical(50, 50))),
         child: Column(children: [
           Maintext(text: bigText, textStyle: Font.font22),
-          const SizedBox(height: 16),
+          const SizedBox(height: 15),
           Maintext(
             text: smallText,
             textStyle: Font.font15.copyWith(
               color: Colors.white.withOpacity(0.8),
             ),
           ),
-          const SizedBox(
-            height: 50,
-          ),
+          SizedBox(height: size.height / 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               TextButton(
-                onPressed: ()=>Navigator.of(context).pushNamed(SignIn.routeName),
+                onPressed: () =>
+                    Navigator.of(context).pushNamed(SignIn.routeName),
                 child: Maintext(
                   text: "Skip",
                   textStyle: Font.font18.copyWith(

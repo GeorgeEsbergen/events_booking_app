@@ -8,25 +8,27 @@ class AllEventsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40.0, left: 10, right: 10),
-      child: Column(
-        children: [
-          
-          const RowBackAppBar(
+    return ListView(
+      children: [
+        const Padding(
+          padding: EdgeInsets.only(left: 10, right: 10),
+          child: RowBackAppBar(
             seconfIcon: Icons.more_vert_outlined,
             title: 'Events',
             firstIcon: Icons.search,
           ),
-          const SizedBox(height: 10),
-          Expanded(
-            child: ListView.builder(
-                shrinkWrap: false,
-                itemBuilder: (context, ind) => const AllEventsCard(location: LocationRow(),),
-                itemCount: 10),
-          )
-        ],
-      ),
+        ),
+        const SizedBox(height: 10),
+        Expanded(
+          child: ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemBuilder: (context, ind) => const AllEventsCard(
+                    location: LocationRow(),
+                  ),
+              itemCount: 10),
+        ),
+      ],
     );
   }
 }

@@ -127,7 +127,7 @@ class SearchRow extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         SizedBox(
-            width: 250,
+            width: 240,
             height: 50,
             child: SearchTextFormFiled(
               hintColor: hintColor,
