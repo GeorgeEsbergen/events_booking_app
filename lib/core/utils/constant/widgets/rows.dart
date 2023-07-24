@@ -156,6 +156,8 @@ class RowOfFilters extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+
     return const Positioned(
       top: 160,
       child: Padding(
@@ -258,7 +260,7 @@ class EventDetailsInvite extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Positioned(
-      top: size.height / 3.7,
+      top: size.height / 4.3,
       left: size.width / 10,
       right: size.width / 10,
       child: Card(

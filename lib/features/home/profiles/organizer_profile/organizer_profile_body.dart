@@ -90,14 +90,11 @@ class _OrganizerProfileBodyState extends State<OrganizerProfileBody> {
                       ]),
                 ),
                 const Expanded(
-                    child: SizedBox(
-                  width: double.infinity,
-                  child: TabBarView(children: [
-                    AboutOrganzier(),
-                    OrganizerEvent(),
-                    OrganizerReview()
-                  ]),
-                )),
+                    child: TabBarView(children: [
+                      AboutOrganzier(),
+                      OrganizerEvent(),
+                      OrganizerReview(),
+                    ])),
               ],
             ),
           )),

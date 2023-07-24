@@ -7,12 +7,14 @@ import '../../../core/utils/constant/widgets/rows.dart';
 
 class HomePageBody extends StatelessWidget {
   const HomePageBody({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
+   var size = MediaQuery.of(context).size;
     return SizedBox(
-        height: double.infinity,
-        width: double.infinity,
+        height: size.height,
+        width: size.width,
         child: SingleChildScrollView(
           child: Stack(
             children: [
@@ -34,7 +36,8 @@ class HomePageBody extends StatelessWidget {
                               height: 259,
                               child: ListView.separated(
                                 scrollDirection: Axis.horizontal,
-                                itemBuilder: (context, ind) => const EventsCard(),
+                                itemBuilder: (context, ind) =>
+                                    const EventsCard(),
                                 separatorBuilder: (context, ind) =>
                                     const SizedBox(width: 5),
                                 itemCount: 5,

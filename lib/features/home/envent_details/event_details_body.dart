@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:book_withmyself/core/utils/constant/buttons.dart';
 import 'package:book_withmyself/core/utils/constant/colors.dart';
 import 'package:book_withmyself/core/utils/constant/fonts.dart';
@@ -15,11 +17,11 @@ class EventDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Stack(
         children: [
           Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
                 padding:
@@ -33,7 +35,7 @@ class EventDetailsBody extends StatelessWidget {
                 child: const RowBack(),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 10, left: 0, top: 30),
+                padding: const EdgeInsets.only(right: 10, left: 0, top: 40),
                 child: Column(
                   children: [
                     const Padding(
@@ -132,6 +134,7 @@ class EventDetailsBody extends StatelessWidget {
                         ),
                       ),
                     ),
+                    SizedBox(height: size.height / 8),
                     BlueButton(
                       onPressedFun: () {},
                       text: 'Buy Ticket \$120',

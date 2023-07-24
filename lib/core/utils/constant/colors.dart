@@ -9,4 +9,5 @@ class MainColors {
   static Color MianBackground = Colors.white.withOpacity(0.97);
   static Color orangeColor = const Color(0xffF0635A);
   static Color starColor = const Color(0xffFBBE47);
+  
 }

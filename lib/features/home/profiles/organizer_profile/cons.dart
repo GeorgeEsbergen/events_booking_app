@@ -77,12 +77,10 @@ class OrganizerEvent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-          shrinkWrap: false,
-          itemBuilder: (context, ind) => const AllEventsCard(),
-          itemCount: 10),
-    );
+    return ListView.builder(
+        shrinkWrap: false,
+        itemBuilder: (context, ind) => const AllEventsCard(),
+        itemCount: 10);
   }
 }
 
@@ -121,13 +119,11 @@ class OrganizerReview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.separated(
-          separatorBuilder: (context, index) => const SizedBox(height: 10),
-          shrinkWrap: false,
-          itemBuilder: (context, ind) => const RatingAndReview(),
-          itemCount: 10),
-    );
+    return ListView.separated(
+        separatorBuilder: (context, index) => const SizedBox(height: 10),
+        shrinkWrap: false,
+        itemBuilder: (context, ind) => const RatingAndReview(),
+        itemCount: 10);
   }
 }
 

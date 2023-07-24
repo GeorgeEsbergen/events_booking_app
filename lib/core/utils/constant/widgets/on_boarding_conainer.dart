@@ -24,7 +24,7 @@ class OnBoardingContainer extends StatelessWidget {
     return Positioned(
       bottom: 0,
       child: Container(
-        padding: const EdgeInsets.only(top: 35, right: 20, left: 20),
+        padding: const EdgeInsets.only(top: 50, right: 20, left: 20),
         alignment: Alignment.bottomCenter,
         width: size.width,
         height: size.height / 2.7,
@@ -42,7 +42,7 @@ class OnBoardingContainer extends StatelessWidget {
               color: Colors.white.withOpacity(0.8),
             ),
           ),
-          SizedBox(height: size.height / 20),
+          SizedBox(height: size.height / 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
