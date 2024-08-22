@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="screenshots/logo.png" alt="Logo" width="130" height="30">
+  <img src="screenshots/first.png" alt="Logo" >
 </p>
 
 # Event Booking App
